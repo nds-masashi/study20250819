@@ -13,8 +13,8 @@
 	// "features": {},
 
 	"mounts": [
-		// "source=/mnt/c/Users/${localEnv:USER}/.aws,target=/home/node/.aws,type=bind,consistency=cached"
-		"source=/mnt/c/Users/masashi/.aws,target=/home/node/.aws,type=bind,consistency=cached"
+		// ${localEnv:USER} shellがbashでないとエラーになります
+		"source=/mnt/c/Users/${localEnv:USER}/.aws,target=/home/node/.aws,type=bind,consistency=cached"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
